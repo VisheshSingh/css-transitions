@@ -24,9 +24,10 @@
             background: pink;
             display: inline-block;
             transition: transform 300ms ease-in-out;
+            pointer-events: none;
         }
 
-        .trigger:hover .box {
+        .trigger.clicked .box {
             transform: translate(200px, 150px) rotate(20deg);
         }
     </style>
@@ -36,6 +37,13 @@
     <div class="trigger">
         <div class="box"></div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('.trigger').on('click', function () {
+            $(this).toggleClass('clicked');
+        })
+    </script>
 </body>
 
 </html>
