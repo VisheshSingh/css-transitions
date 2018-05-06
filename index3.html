@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS transitions</title>
+    <style>
+        body {
+            margin: 100px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            transition-duration: 500ms;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+            transition-property: width;
+            /* transition-property: background, transform; */
+        }
+
+        .mainbox {
+            background: teal;
+            width: 200px;
+            height: 200px;
+            transition-property: transform;
+            transition-duration: 500ms;
+        }
+
+        .mainbox:hover {
+            background: #ff6b6b;
+            transform: rotate(45deg)
+        }
+
+        .container:hover .box {
+            width: 600px;
+        }
+
+        .one {
+            background: #07BEB8;
+            transition-timing-function: linear;
+        }
+
+        .two {
+            background: #3DCCC7;
+            transition-timing-function: ease-in;
+        }
+
+        .three {
+            background: #9CEAEF;
+            transition-timing-function: ease-out;
+        }
+
+        .four {
+            background: #B1F8F2;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox"></div>
+    <hr>
+    <div class="container">
+        <div class="box one">Box1</div>
+        <div class="box two">Box2</div>
+        <div class="box three">Box3</div>
+        <div class="box four">Box4</div>
+    </div>
+
+</body>
+
+</html>

@@ -16,15 +16,19 @@
             height: 200px;
             background: pink;
             display: inline-block;
-            animation: myframes 2s ease-in-out 0s infinite;
+            animation: myframes 2s ease-in-out 1s infinite;
         }
 
         @keyframes myframes {
-            from {
+            0% {
                 height: 200px;
             }
 
-            to {
+            50% {
+                width: 400px;
+            }
+
+            100% {
                 height: 600px;
                 background: orange;
             }
